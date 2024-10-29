@@ -2,6 +2,10 @@
 ## springboot desenvolvimento web 3
 
 
+###linguagens e tecnologias utilizadas no projeto até o momento. 29/10/24
+
+Java, Javascript, Html, CSS, Mongodb, Springboot
+
 Projeto iniciado utilizando - Spring initializr
 
 - Maven 
