@@ -1,38 +1,17 @@
-## Loja_brinquedos 
-## springboot desenvolvimento web 3
 
+**Loja de Brinquedos** é um projeto de desenvolvimento web utilizando **Spring Boot**. O projeto foi iniciado com o **Spring Initializr** e utiliza as seguintes tecnologias: **Java**, **JavaScript**, **HTML**, **CSS**, **MongoDB** e **Spring Boot**.
 
-###linguagens e tecnologias utilizadas no projeto até o momento. 29/10/24
+### Dependências
+- **Spring Web**: Criação de endpoints da API REST.
+- **Spring Data MongoDB**: Manipulação do banco de dados.
+- **Lombok**: Facilitação na criação de getters/setters automaticamente.
 
-Java, Javascript, Html, CSS, Mongodb, Springboot
+### Execução
+Para executar o projeto, inicie como uma aplicação Java no Spring Boot. Acesse `http://localhost:8080` para visualizar a página da loja.
 
-Projeto iniciado utilizando - Spring initializr
-
-- Maven 
-- Linguagem: Java
-- Springboot - versao mais recente e estavel
-- Packaging: Jar
-- Java: 21
-
-#Dependencias utilizadas no projeto 
-
-- Spring Web: para criar endpoints da API REST
-- Spring Data MongoDB: para manipulação do banco de dados 
-- Lombok: Para facilitar a criação dos getters/setters automaticamnete
-
-
-#Executando o Projeto
-
-Execute como aplicação Java no Springboot para Buildar o projeto.
-Depois execute como Spring Boot app, deve iniciar e criar o banco de dados MongoDB.
-- Acesse http://localhost:8080 no seu navegador para ver a página da loja.
-
-#Testar a API
-Você pode usar o Postman para testar a API. Para adicionar produtos, faça uma requisição POST para http://localhost:8080/produtos
-
-exemplo: 
-
-```yaml
+### Teste da API
+Utilize o Postman para testar a API. Exemplo de requisição POST para adicionar produtos:
+```json
 {
     "nome": "Brinquedo A",
     "descricao": "Descrição do Brinquedo A",
@@ -40,4 +19,6 @@ exemplo:
     "imagemUrl": "https://example.com/imagem-a.jpg"
 }
 ```
-###imagens podem ser adicionadas com URLs externas ou internas 
+
+---
+
