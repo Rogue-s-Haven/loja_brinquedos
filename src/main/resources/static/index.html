@@ -4,29 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loja de Brinquedos</title>
-    <style>
-        /* Adicione estilos básicos aqui */
-    </style>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <h1>Loja de Brinquedos</h1>
+
     <div id="produtos"></div>
-    <script>
-        fetch('/produtos')
-            .then(response => response.json())
-            .then(produtos => {
-                const produtosDiv = document.getElementById('produtos');
-                produtos.forEach(produto => {
-                    const produtoDiv = document.createElement('div');
-                    produtoDiv.innerHTML = `
-                        <h2>${produto.nome}</h2>
-                        <p>${produto.descricao}</p>
-                        <p>Preço: R$ ${produto.preco.toFixed(2)}</p>
-                        <img src="${produto.imagemUrl}" alt="${produto.nome}" style="width:100px;height:100px;">
-                    `;
-                    produtosDiv.appendChild(produtoDiv);
-                });
-            });
-    </script>
+    <div id="carrinho">
+        <h2>Carrinho de Compras</h2>
+        <div id="carrinho-itens"></div>
+        <p><strong>Total:</strong> R$ <span id="total">0.00</span></p>
+    </div>
+
+    <script src="/js/script.js"></script>
 </body>
 </html>
