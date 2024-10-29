@@ -24,10 +24,36 @@ function atualizarCheckout() {
 }
 
 function finalizarCompra() {
-    alert('Compra finalizada com sucesso!');
-    localStorage.removeItem('carrinho'); // Limpa o carrinho ao finalizar a compra
-    window.location.href = '/';
+    const carrinho = carregarCarrinho();
+    const total = carrinho.reduce((sum, item) => sum + item.preco, 0);
+
+    const compra = {
+        produtos: carrinho,
+        valorTotal: total
+    };
+
+    fetch('/api/compras', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(compra)
+    })
+    .then(response => {
+        if (response.ok) {
+            alert('Compra finalizada com sucesso!');
+            localStorage.removeItem('carrinho'); // Limpa o carrinho ao finalizar a compra
+            window.location.href = '/';
+        } else {
+            alert('Erro ao finalizar a compra. Tente novamente.');
+        }
+    })
+    .catch(error => {
+        console.error('Erro ao finalizar a compra:', error);
+        alert('Erro ao finalizar a compra. Tente novamente.');
+    });
 }
 
 // Atualiza a página de checkout ao carregar
 document.addEventListener('DOMContentLoaded', atualizarCheckout);
+
