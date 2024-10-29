@@ -8,11 +8,11 @@
 		<version>3.3.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.sualoja</groupId>
-	<artifactId>loja-brinquedos</artifactId>
+	<groupId>com.loja</groupId>
+	<artifactId>Loja_brinquedos</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Loja de Brinquedos - web 3</name>
-	<description>Projeto - Desenvolvimento web 3 - Loja de brinquedos</description>
+	<name>Loja_brinquedos</name>
+	<description>Projeto desenvolvimento web 3 - loja de brinquedos</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -32,13 +32,19 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<artifactId>spring-boot-starter-data-mongodb</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
