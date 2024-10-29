@@ -36,3 +36,4 @@ exemplo:
     "imagemUrl": "https://example.com/imagem-a.jpg"
 }
 ```
+###imagens podem ser adicionadas com URLs externas ou internas 
