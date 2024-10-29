@@ -28,10 +28,11 @@ Você pode usar o Postman para testar a API. Para adicionar produtos, faça uma 
 
 exemplo: 
 
->[!TIP]
->{
->    "nome": "Brinquedo A",
->    "descricao": "Descrição do Brinquedo A",
->    "preco": 99.99,
->    "imagemUrl": "https://example.com/imagem-a.jpg"
->}
+```yaml
+{
+    "nome": "Brinquedo A",
+    "descricao": "Descrição do Brinquedo A",
+    "preco": 99.99,
+    "imagemUrl": "https://example.com/imagem-a.jpg"
+}
+```
