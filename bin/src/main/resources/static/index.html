@@ -1,32 +1,62 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loja de Brinquedos</title>
-    <style>
-        /* Adicione estilos básicos aqui */
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loja de Brinquedos</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>Loja de Brinquedos</h1>
-    <div id="produtos"></div>
-    <script>
-        fetch('/produtos')
-            .then(response => response.json())
-            .then(produtos => {
-                const produtosDiv = document.getElementById('produtos');
-                produtos.forEach(produto => {
-                    const produtoDiv = document.createElement('div');
-                    produtoDiv.innerHTML = `
-                        <h2>${produto.nome}</h2>
-                        <p>${produto.descricao}</p>
-                        <p>Preço: R$ ${produto.preco.toFixed(2)}</p>
-                        <img src="${produto.imagemUrl}" alt="${produto.nome}" style="width:100px;height:100px;">
-                    `;
-                    produtosDiv.appendChild(produtoDiv);
-                });
-            });
-    </script>
+  <header>
+    <nav class="navbar   
+ navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Loja   
+ de Brinquedos</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Catálogo de Brinquedos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Administração</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sobre a equipe</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-3" *ngFor="let brinquedo of brinquedos">
+        <div class="card">
+          <img src="{{ brinquedo.imagem }}" class="card-img-top" alt="{{ brinquedo.nome }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ brinquedo.nome }}</h5>
+            <p class="card-text">{{   
+ brinquedo.descricao }}</p>
+            <p class="card-text">R$ {{ brinquedo.preco }}</p>
+            <button class="btn btn-primary">Adicionar ao Carrinho</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="carrinho">
+    </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/script.js"></script>
 </body>
-</html>
+</html>   
