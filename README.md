@@ -11,6 +11,8 @@ Para executar o projeto, inicie como uma aplicação Java no Spring Boot. Acesse
 
 ### Teste da API
 Utilize o Postman para testar a API. Exemplo de requisição POST para adicionar produtos:
+
+http://localhost:8080/produtos
 ```json
 {
     "nome": "Brinquedo A",
