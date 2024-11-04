@@ -4,15 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>Finalização de Compra</h1>
-    <div id="checkout-itens"></div>
-    <p><strong>Total:</strong> R$ <span id="checkout-total">0.00</span></p>
-    <button onclick="finalizarCompra()">Finalizar Compra</button>
-    <button onclick="window.location.href='/'">Voltar para a Loja</button>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Loja de Brinquedos</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="checkout.html">Carrinho</a></li>
+                <li class="nav-item"><a class="nav-link" href="catalogo.html">Catálogo</a></li>
+                <li class="nav-item"><a class="nav-link" href="equipe.html">Equipe</a></li>
+                <li class="nav-item"><a class="nav-link" href="adm.html">Administração</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="mb-4">Finalização de Compra</h1>
+
+        <!-- Div para exibir itens do carrinho -->
+        <div id="checkout-itens" class="mb-3 p-3 border rounded bg-light">
+            <!-- Os itens do carrinho serão inseridos aqui pelo JavaScript -->
+        </div>
+
+        <!-- Total e ações de checkout -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <p class="h5 mb-0"><strong>Total:</strong> R$ <span id="checkout-total">0.00</span></p>
+            <div>
+                <button class="btn btn-success mr-2" onclick="finalizarCompra()">Finalizar Compra</button>
+                <button class="btn btn-secondary" onclick="window.location.href='index.html'">Voltar para a Loja</button>
+            </div>
+        </div>
+    </div>
 
     <script src="/js/checkout.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>

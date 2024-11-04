@@ -18,8 +18,9 @@ button {
 
 #carrinho {
     position: fixed;
-    top: 20px;
-    left: 20px; /* Muda o carrinho para o lado esquerdo */
+    top: 50%; /* Posiciona o topo do elemento no meio da tela */
+    right: 0; /* Alinha o elemento à direita */
+    transform: translateY(-50%);
     width: 150px;
     height: 500px; /* Altura fixa do carrinho */
     border: 1px solid #ddd;
